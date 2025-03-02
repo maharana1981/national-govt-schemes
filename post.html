@@ -1,0 +1,157 @@
+<body>
+    <header>
+        <h1 id="post-title"></h1>
+    </header>
+
+    <div class="post-container">
+        <img id="post-image" alt="">
+        <p id="post-content"></p>
+
+        <!-- ✅ Ad 1: Below First Paragraph -->
+        <div class="ad-container">
+            <p>विज्ञापन</p>
+            <div class="ad-box">[Ad Slot 1]</div>
+        </div>
+
+        <!-- ✅ Ad 2: Mid-Content -->
+        <div class="ad-container">
+            <p>विज्ञापन</p>
+            <div class="ad-box">[Ad Slot 2]</div>
+        </div>
+
+        <!-- ✅ Ad 3: Before Share Buttons -->
+        <div class="ad-container">
+            <p>विज्ञापन</p>
+            <div class="ad-box">[Ad Slot 3]</div>
+        </div>
+
+        <!-- ✅ Social Media Share Buttons -->
+        <div class="share-buttons">
+            <span>शेयर करें: </span>
+            <a id="whatsapp-share" class="share-btn whatsapp" target="_blank">WhatsApp</a>
+            <a id="facebook-share" class="share-btn facebook" target="_blank">Facebook</a>
+            <a id="twitter-share" class="share-btn twitter" target="_blank">Twitter</a>
+            <a id="linkedin-share" class="share-btn linkedin" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 National Govt. Schemes. सभी अधिकार सुरक्षित।</p>
+            <p>
+                <a href="privacy-policy.html">गोपनीयता नीति</a> | 
+                <a href="terms-of-service.html">नियम और शर्तें</a> | 
+                <a href="contact.html">संपर्क करें</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const slug = urlParams.get('slug');
+        const currentUrl = window.location.href;
+
+        fetch('posts.json')
+            .then(response => response.json())
+            .then(data => {
+                const post = data.posts.find(p => p.url_slug === slug);
+                if (post) {
+                    document.getElementById('post-title').textContent = post.title;
+                    document.getElementById('post-image').src = post.featured_image;
+                    document.getElementById('post-image').alt = post.title;
+                    document.getElementById('post-content').innerHTML = post.content;
+                } else {
+                    document.getElementById('post-content').innerHTML = "<p>पोस्ट नहीं मिली!</p>";
+                }
+            })
+            .catch(error => {
+                document.getElementById('post-content').innerHTML = "<p>पोस्ट लोड करने में त्रुटि हुई।</p>";
+            });
+
+        // ✅ Update Share Buttons with Current Post URL
+        document.getElementById('whatsapp-share').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(currentUrl)}`;
+        document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+        document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=Check%20this%20out!`;
+        document.getElementById('linkedin-share').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFEFD5;
+        }
+        .post-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+        .post-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .ad-container {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .ad-container {
+    display: none; /* Hide ad containers */
+    }
+        .ad-box {
+            height: 90px;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+        }
+        .share-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .share-buttons span {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .share-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .whatsapp { background-color: #25D366; }
+        .facebook { background-color: #1877F2; }
+        .twitter { background-color: #1DA1F2; }
+        .linkedin { background-color: #0077B5; }
+        .share-btn:hover {
+            opacity: 0.8;
+        }
+        footer {
+            background-color: #FE5556;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .footer-container a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</body>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest government schemes, jobs, loans, and empowerment initiatives">
+    <meta name="keywords" content="Government schemes, jobs, loans, women empowerment, farmer schemes, government websites">
+    <meta name="author" content="Ditya">
+
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="National Govt. Schemes">
+    <meta property="og:description" content="Discover latest government schemes, job opportunities, loans, and empowerment programs.">
+    <meta property="og:image" content="path_to_image.jpg">
+    <meta property="og:url" content="your_website_url">
+    <meta name="robots" content="index, follow">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "National Govt. Schemes",
+      "url": "your_website_url",
+      "description": "Latest government schemes, jobs, and loans.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "National Govt. Schemes"
+      }
+    }
+    </script>
+
+    <title>National Govt. Schemes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>National Govt. Schemes</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Category Filters -->
+    <main>
+        <div class="category-filters">
+            <select id="category1" onchange="filterPosts()">
+                <option value="">Categories</option>
+                <option value="Govt. Schemes">Govt. Schemes</option>
+                <option value="Govt. Jobs">Govt. Jobs</option>
+                <option value="Govt. Loans">Govt. Loans</option>
+                <option value="Woman Empowerment">Woman Empowerment</option>
+                <option value="Farmer Schemes">Farmer Schemes</option>
+            </select>
+
+            <select id="category2" onchange="filterPosts()">
+                <option value="">Government Websites</option>
+<option value="Website 1" data-link="https://www.rnbgujarat.org">R&B Gujarat</option>
+<option value="Website 2" data-link="https://www.indiapost.gov.in">India Post</option>
+<option value="Website 3" data-link="https://www.gst.gov.in">GST Portal</option>
+<option value="Website 4" data-link="https://www.tn.gov.in">Tamil Nadu Govt</option>
+<option value="Website 5" data-link="https://www.up.gov.in">Uttar Pradesh Govt</option>
+<option value="Website 6" data-link="https://www.maharashtra.gov.in">Maharashtra Govt</option>
+<option value="Website 7" data-link="https://www.parivahan.gov.in">Parivahan (Transport)</option>
+<option value="Website 8" data-link="https://www.eci.gov.in">Election Commission of India</option>
+<option value="Website 9" data-link="https://portal2.passportindia.gov.in/AppOnlineProject/welcomeLink">Passport Seva</option>
+<option value="Website 10" data-link="https://www.aap.gov.in">AAP Govt Portal</option>
+<option value="Website 11" data-link="https://www.karnataka.gov.in">Karnataka Govt</option>
+<option value="Website 12" data-link="https://www.telangana.gov.in">Telangana Govt</option>
+<option value="Website 13" data-link="https://www.odisha.gov.in">Odisha Govt</option>
+<option value="Website 14" data-link="https://www.epfindia.gov.in">EPF India</option>
+<option value="Website 15" data-link="https://www.uidai.gov.in">UIDAI (Aadhaar)</option>
+<option value="Website 16" data-link="https://www.mp.gov.in">Madhya Pradesh Govt</option>
+<option value="Website 17" data-link="https://www.rajasthan.gov.in">Rajasthan Govt</option>
+<option value="Website 18" data-link="https://www.bihar.gov.in">Bihar Govt</option>
+<option value="Website 19" data-link="https://www.incometax.gov.in">Income Tax Dept</option>
+<option value="Website 20" data-link="https://www.maharashtra.gov.in">Maharashtra Govt</option>
+<option value="">Government Websites</option>
+<option value="National Digital Library of India" data-link="https://ndl.iitkgp.ac.in">National Digital Library of India</option>
+<option value="SWAYAM" data-link="https://swayam.gov.in">SWAYAM</option>
+<option value="e-PG Pathshala" data-link="https://epgp.inflibnet.ac.in">e-PG Pathshala</option>
+<option value="DIKSHA" data-link="https://diksha.gov.in">DIKSHA</option>
+<option value="National Repository of Open Educational Resources" data-link="https://nroer.gov.in">National Repository of Open Educational Resources</option>
+<option value="Vidya Lakshmi Portal" data-link="https://www.vidyalakshmi.co.in">Vidya Lakshmi Portal</option>
+<option value="National Academic Depository" data-link="https://nad.gov.in">National Academic Depository</option>
+<option value="e-ShodhSindhu" data-link="https://ess.inflibnet.ac.in">e-ShodhSindhu</option>
+<option value="Shodhganga" data-link="https://shodhganga.inflibnet.ac.in">Shodhganga</option>
+<option value="e-Yantra" data-link="https://www.eyantra.org">e-Yantra</option>
+<option value="Virtual Labs" data-link="https://www.vlab.co.in">Virtual Labs</option>
+<option value="NPTEL" data-link="https://nptel.ac.in">NPTEL</option>
+<option value="Spoken Tutorial" data-link="https://spoken-tutorial.org">Spoken Tutorial</option>
+<option value="ePathshala" data-link="https://epathshala.nic.in">ePathshala</option>
+<option value="National Career Service" data-link="https://www.ncs.gov.in">National Career Service</option>
+<option value="AICTE" data-link="https://www.aicte-india.org">AICTE</option>
+<option value="UGC" data-link="https://www.ugc.ac.in">UGC</option>
+<option value="NTA" data-link="https://www.nta.ac.in">NTA</option>
+<option value="CSIR" data-link="https://www.csir.res.in">CSIR</option>
+<option value="ICAR" data-link="https://icar.org.in">ICAR</option>
+<option value="NIC Results Portal" data-link="https://results.gov.in">National Informatics Centre (NIC) Results Portal</option>
+<option value="CBSE Results" data-link="https://results.cbse.nic.in">Central Board of Secondary Education (CBSE) Results</option>
+<option value="CISCE Results" data-link="https://cisceresults.ice-cs.org">Council for the Indian School Certificate Examinations (CISCE) Results</option>
+<option value="NIOS Results" data-link="https://results.nios.ac.in">National Institute of Open Schooling (NIOS) Results</option>
+<option value="Andhra Pradesh SSC Board" data-link="https://www.bse.ap.gov.in/">Andhra Pradesh Board of Secondary Education</option>
+<option value="Andhra Pradesh Intermediate Board" data-link="https://bie.ap.gov.in/">Andhra Pradesh Board of Intermediate Education</option>
+<option value="Bihar Board Results" data-link="https://biharboardonline.bihar.gov.in">Bihar School Examination Board (BSEB)</option>
+<option value="GSEB Results" data-link="https://www.gseb.org/">Gujarat Secondary and Higher Secondary Education Board (GSEB)</option>
+<option value="KSEEB Results" data-link="https://karresults.nic.in/">Karnataka Secondary Education Examination Board (KSEEB)</option>
+<option value="Kerala Pareeksha Bhavan" data-link="https://keralapareekshabhavan.in/">Kerala Pareeksha Bhavan</option>
+<option value="Maharashtra Board Results" data-link="https://mahresult.nic.in">Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE)</option>
+<option value="PSEB Results" data-link="https://www.pseb.ac.in/">Punjab School Education Board (PSEB)</option>
+<option value="RBSE Results" data-link="https://rajresults.nic.in/">Rajasthan Board of Secondary Education (RBSE)</option>
+<option value="TNDGE Results" data-link="https://www.dge.tn.gov.in/">Tamil Nadu Directorate of Government Examinations (TNDGE)</option>
+<option value="Telangana SSC Board Results" data-link="https://bse.telangana.gov.in/">Telangana Board of Secondary Education</option>
+<option value="Telangana Intermediate Board Results" data-link="https://tsbie.cgg.gov.in/">Telangana State Board of Intermediate Education</option>
+<option value="UP Board Results" data-link="https://upresults.nic.in/">Uttar Pradesh Madhyamik Shiksha Parishad (UPMSP)</option>
+<option value="WBBSE Results" data-link="https://wbresults.nic.in/">West Bengal Board of Secondary Education (WBBSE)</option>
+            </select>
+        </div>
+
+        <!-- Ad Space Below Dropdowns -->
+        <div class="ad-space">[Ad Space Here]</div>
+
+        <section id="posts-container"></section>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="pageNumber">1</span>
+            <button id="nextPage">Next</button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+        <p>&copy; 2025 National Govt. Schemes. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

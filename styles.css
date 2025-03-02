@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+    background-color: #F1F8E9; /* Soft Green Tint */
+    color: #2E2E2E; /* Dark Greenish Gray */
+    padding-top: 100px; /* Ensures content is not hidden behind the header */
+}
+
+/* Header */
+header {
+    background-color: #5C6BC0; /* Vibrant Green */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #D3D3D3; /* Light Gray */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #B71C1C; /* Dark Red on Hover */
+}
+
+/* Main Content */
+main {
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+}
+
+/* Post Content */
+.post-content {
+    margin-top: 110px;
+    padding: 20px;
+}
+
+/* Post Container */
+.post-container {
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+}
+
+/* Dropdown Filters */
+.category-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+    margin-top: 10px;
+}
+
+.category-filters select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #009688;
+    width: 250px;
+    background-color: white;
+    color: #2E2E2E;
+}
+
+/* Fix Ad Space Overlapping */
+.ad-space {
+    position: relative;
+    z-index: 5;
+}
+
+/* Buttons */
+button {
+    background-color: #D32F2F;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #B71C1C;
+}
+
+/* Posts Grid */
+#posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .category-filters {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .category-filters select {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    #posts-container {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+
+    .post-content {
+        margin-top: 120px;
+    }
+
+    main, .post-container, #posts-container {
+        max-width: 95%;
+    }
+}
+
+/* Post Title */
+#post-title {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    font-size: 1.4em;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Header Adjustments for Mobile */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    #post-title {
+        font-size: 1.2em;
+        padding: 10px 15px;
+        line-height: 1.4;
+        max-width: 100%;
+    }
+    
+    body {
+        padding-top: 80px;
+    }
+
+    .post-container {
+        margin-top: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Dark Gray */
+    color: #FFFFFF; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Footer Links */
+footer a {
+    color: #FFD700; /* Golden Yellow */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #FF4F58; /* Adobe Red */
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
